@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+	long long n; cin >> n;
+	long long* ArrayOrginal = new long long[n];
+	long long* arrayReverse = new long long[n];
+	for (int i = 0; i < n; i++) {
+		cin >> ArrayOrginal[i];
+	}
+	for (int i = 0; i <n; i++) {
+		arrayReverse[n-1-i] = ArrayOrginal[i];
+	}
+	string a;
+	for (int i = 0; i < n; i++) {
+		if (ArrayOrginal[i] == arrayReverse[i]) {
+			a = "YES";
+			continue;
+		}
+		else {
+			a = "NO";
+			break;
+		}
+	}
+	cout << a;
+}
