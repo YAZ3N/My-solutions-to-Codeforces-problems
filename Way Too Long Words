@@ -1,0 +1,36 @@
+#include <iostream>
+#include<string>
+ 
+using namespace std;
+int main() {
+ 
+ 
+	int t; cin >> t;
+ 
+	string word;
+	int counter = 0;
+	int counter2 = 0;
+	char f=NULL, l=NULL;
+	while (t--) {
+		cin >> word;
+		counter = 0;
+		int counter = word.size();
+		f = NULL, l = NULL;
+		f = word.front();
+		l = word.back();
+		counter2 = 0;
+		if (counter > 10) {
+ 
+			for (int i = 1; i<word.size()-1; i++) {
+				counter2++;
+			}
+ 
+		}
+		else {
+			cout << word<<endl;
+			continue;
+		}
+		cout << f << counter2 << l<<endl;
+	}
+ 
+}
