@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+ int main(){
+ 
+  int m,n;
+  int sum;
+  while(true){
+  int a,b;
+  cin>>a>>b;
+  if(a<=0 || b<=0)
+    break;
+ 
+  m=max(a,b);
+  n=min(a,b);
+    sum=0;
+ 
+    for(int i=n;i<=m;i++){
+       sum+=i;
+       cout<<i<<" ";
+    }
+    cout<<"sum ="<<sum;
+    cout<<endl;
+ }
+ }
