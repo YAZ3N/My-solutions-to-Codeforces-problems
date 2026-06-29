@@ -1,0 +1,29 @@
+#include <iostream>
+ 
+using namespace std;
+bool luck(int x){
+ while(x>0){
+    int z=x%10;
+    if(z!=4 && z!=7)
+        return 0;
+    x/=10;
+ }
+  return 1;
+}
+void solve(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        if(n%i==0 && luck(i)){
+            cout<<"YES";
+            return;
+        }
+    }
+    cout<<"NO";
+ 
+}
+int main(){
+ 
+solve();
+}
+ 
