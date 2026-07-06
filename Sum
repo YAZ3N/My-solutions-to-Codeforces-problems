@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve() {
+  int n;
+    cin>>n;
+    int x,y,z;
+   
+    while (n--) {
+      
+        cin>>x>>y>>z;
+        if (x+y==z) {
+            cout<<"yes"<<endl;
+        }
+        else if (x+z==y) {
+            cout<<"yes"<<endl;
+        }
+        else if (y+z==x) {
+            cout<<"yes"<<endl;
+        }
+        else {
+            cout<<"no"<<endl;
+        }
+    }
+}
+int main() {
+ 
+    solve();
+ 
+}
