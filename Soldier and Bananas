@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+  int x,y,z;
+    cin>>x>>y>>z;
+    int s=0;
+    for (int i=1;i<=z;i++) {
+         s+=(i*x);
+    }
+   int sum=s-y;
+    if ((sum!=y)&&sum>0) {
+        cout<<sum;
+    }
+else {
+    cout<<0;
+}
+}
+int main() {
+
+    solve();
+
+}
