@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void Solve() {
+ 
+   long n;
+    cin>>n;
+    string s;
+    long long counter=1;
+    bool f=false;
+    while (n--) {
+        f=false;
+        counter=1;
+        cin>>s;
+ 
+        for (int i=0;i<s.size();i++) {
+            if (s[i]=='b') {
+               counter*=2;
+                f=true;
+            }
+        }
+       if (f==true) {
+           cout<<counter<<endl;
+       }
+        else {
+            cout<<1<<endl;
+        }
+    }
+}
+int main() {
+ 
+    Solve();
+ 
+}
