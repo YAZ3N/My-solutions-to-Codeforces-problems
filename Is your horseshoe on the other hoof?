@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    int counter=0;
+    int arr[4];
+    set<int>s;
+    for (int i=0;i<4;i++) {
+        cin>>arr[i];
+        s.insert(arr[i]);
+    }
+    cout<<4-s.size();
+
+}
+int main() {
+ solve();
+}
