@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void Solve() {
+ 
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int freq[26]{};
+    for (int i=0;i<n;i++) {
+      s[i]=tolower(s[i]);
+        freq[s[i]-'a']++;
+    }
+    int c=0;
+    for (int i=0;i<26;i++) {
+        if (freq[i]>=1) {
+            c++;
+        }
+    }
+    if (c==26) {
+        cout<<"YES";
+    }
+    else {
+        cout<<"NO";
+    }
+}
+ 
+int main() {
+ 
+    Solve();
+}
