@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void Solve() {
+    int n;
+    cin>>n;
+bool f=false;
+    while (n--) {
+        bool f=false;
+        int x;
+        cin>>x;
+        vector<int>v(x+1);
+ 
+        for (int i=1;i<x+1;i++) {
+            cin>>v[i];
+        }
+        int m = *max_element(v.begin(), v.end());
+        vector<int>freq(m+1,0);
+ 
+        for (int i=1;i<v.size();i++) {
+            freq[v[i]]++;
+        }
+       int res;
+        for (int i=1;i<freq.size();i++) {
+            if (freq[i]>=3) {
+               f=true;
+                res=i;
+                break;
+            }
+        }
+        if (f) {
+            cout<<res<<endl;
+        }
+        else {
+           cout<<-1<<endl;
+        }
+ 
+    }
+}
+ 
+int main() {
+ 
+    Solve();
+}
