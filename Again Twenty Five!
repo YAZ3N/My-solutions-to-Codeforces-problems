@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    long long n;
+    cin>>n;
+
+    cout<<25;
+}
+int main() {
+solve();
+
+}
