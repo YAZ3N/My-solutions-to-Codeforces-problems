@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+ void solve() {
+
+     int n;
+     cin>>n;
+     int p;
+     cin>>p;
+
+     set<int>s1;
+     for (int i=1;i<=p;i++) {
+         int x;
+         cin>>x;
+         s1.insert(x);
+     }
+
+     int q;
+     cin>>q;
+     set<int>s2;
+     for (int i=1;i<=q;i++) {
+         int y;
+         cin>>y;
+
+         s2.insert(y);
+     }
+    s1.insert(s2.begin(),s2.end());
+
+     if (s1.size()==n) {
+         cout<<"I become the guy.";
+     }
+     else {
+         cout<<"Oh, my keyboard!";
+     }
+
+ }
+int main() {
+
+     solve();
+
+}
