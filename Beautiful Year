@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    int x;
+    cin>>x;
+
+    while (true) {
+        x++;
+
+        string s=to_string(x);
+        set<int>st;
+        for (int i=0;i<s.size();i++) {
+
+            st.insert(s[i]);
+        }
+        if (st.size()==s.size()) {
+            cout<<x;
+            break;
+
+        }
+    }
+
+}
+int main() {
+    solve();
+
+}
