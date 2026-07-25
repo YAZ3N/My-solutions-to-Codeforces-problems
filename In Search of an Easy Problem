@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    int n;
+    cin>>n;
+    int counter=0;
+   while (n--) {
+       int x;
+       cin>>x;
+       if (x==1) {
+           counter++;
+       }
+   }
+    if (counter==0) {
+        cout<<"EASY";
+    }
+    else {
+        cout<<"HARD";
+    }
+}
+int main() {
+    solve();
+
+}
