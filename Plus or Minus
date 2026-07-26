@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve() {
+    int n;
+    cin>>n;
+   char op1='+',op2='-';
+    while (n--) {
+    int x,y,z;
+        cin>>x>>y>>z;
+        if (x+y==z) {
+            cout<<op1<<endl;
+        }
+        if (x-y==z) {
+            cout<<op2<<endl;
+        }
+ 
+    }
+ 
+}
+int main() {
+ 
+    solve();
+ 
+}
