@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void Solve() {
+    int n;
+    cin>>n;
+    while (n--) {
+        int x,y,z;
+        cin>>x>>y>>z;
+        if (x+y>=10) {
+            cout<<"yes"<<endl;
+        }
+        else if (x+z>=10) {
+            cout<<"yes"<<endl;
+        }
+        else if (y+z>=10) {
+            cout<<"yes"<<endl;
+        }
+        else {
+            cout<<"no"<<endl;
+        }
+    }
+}
+int main() {
+ 
+    Solve();
+ 
+}
