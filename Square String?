@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+  int n;
+  cin>>n;
+  while(n--){
+    string s1;
+    cin>>s1;
+   if(s1.size()%2!=0){
+    cout<<"no"<<endl;
+   }
+     else{
+        string s2=s1.substr(0,s1.size()/2);
+        string s3=s1.substr(s1.size()/2,s1.size());
+
+        if(s2==s3){
+            cout<<"yes"<<endl;
+        }
+        else{
+            cout<<"no"<<endl;
+        }
+     }
+   }
+  }
+
+int main(){
+
+solve();
+}
