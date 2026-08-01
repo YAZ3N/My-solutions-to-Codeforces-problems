@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void Equation(){
+
+  int x,y;
+  cin>>x>>y;
+  long long sum=0;
+  for(int i=0;i<=y;i+=2){
+    if(i==0){
+        sum+=pow(x,0)-1;
+    }
+   else{
+    sum+=round(pow(x,i));
+   }
+  }
+    cout<<sum;
+  }
+
+int main(){
+
+Equation();
+}
