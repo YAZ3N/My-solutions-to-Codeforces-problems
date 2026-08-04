@@ -1,0 +1,17 @@
+#include <iostream>
+#include <set>
+using namespace std;
+void Solve() {
+	set<int>s;
+	int n;
+	cin >> n;
+	while (n--) {
+		int x;
+		cin >> x;
+		s.insert(x);
+	}
+	cout << s.size();
+}
+int main() {
+	Solve();
+}
