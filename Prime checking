@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void isPrime() {
+    long long n;
+    cin>>n;
+
+    if (n==1) {
+        cout<<"NO";
+        return;
+    }
+
+    int counter=0;
+
+    for (int i=2;i<=sqrt(n);i++) {
+        if (n%i==0) {
+           counter++;
+        }
+    }
+    if (counter!=0) {
+        cout<<"NO";
+    }
+    else {
+        cout<<"YES";
+    }
+
+}
+
+int main() {
+    isPrime();
+
+}
