@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void Solve(int x) {
+
+    if (x==0)
+        return;
+
+    cout<<"I love Recursion"<<endl;
+    Solve(x-1);
+
+
+}
+int main() {
+    int x;
+    cin>>x;
+    Solve(x);
+}
