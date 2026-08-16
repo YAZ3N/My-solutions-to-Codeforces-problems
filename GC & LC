@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+void Solve() {
+    long long a,b;
+    cin>>a>>b;
+    long long orA=a;
+    long long orB=b;
+    while (b!=0) {
+        long long temp=a%b;
+        a=b;
+        b=temp;
+    }
+    long long gcd=a;
+    long long lcm=(orA/gcd)*orB;
+    cout<<gcd<<" "<<lcm;
+
+}
+int main() {
+
+    Solve();
+}
