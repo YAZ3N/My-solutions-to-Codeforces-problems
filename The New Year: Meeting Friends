@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+void Solve() {
+
+   int a,b,c;
+    cin>>a>>b>>c;
+
+    vector<int>v;
+    v.push_back(a);
+    v.push_back(b);
+    v.push_back(c);
+
+    sort(v.begin(),v.end());
+    int m=v[1];
+
+    int d1=0,d2=0;
+    while (v[0]!=m) {
+        d1++;
+        v[0]++;
+    }
+    while (v[2]!=m) {
+        d2++;
+        v[2]--;
+    }
+    cout<<d1+d2;
+}
+
+
+int main() {
+
+    Solve();
+}
