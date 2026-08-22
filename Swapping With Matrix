@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+void Solve() {
+
+    int n;
+    cin>>n;
+    int arr[n+1][n+1];
+    int x,y;
+    cin>>x>>y;
+
+    for (int i=1;i<=n;i++) {
+        for (int j=1;j<=n;j++) {
+            cin>>arr[i][j];
+        }
+    }
+    for (int j=1;j<=n;j++) {
+       swap(arr[x][j],arr[y][j]);
+    }
+
+    for (int i=1;i<=n;i++) {
+        swap(arr[i][x],arr[i][y]);
+    }
+
+    for (int i=1;i<=n;i++) {
+        for (int j=1;j<=n;j++) {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
+int main() {
+
+    Solve();
+}
