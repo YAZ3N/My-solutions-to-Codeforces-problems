@@ -1,0 +1,89 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int FindMax(int arr[],int size) {
+ 
+    return *max_element(arr+1,arr+size+1);
+}
+ 
+int FindMin(int arr[],int size) {
+ 
+    return *min_element(arr+1,arr+size+1);
+}
+ 
+int CountPrime(int arr[],int size) {
+    int counter=0;
+    int r=0;
+    for (int i=1;i<=size;i++) {
+        counter=0;
+        if (arr[i] < 2) continue;
+        for (int j=1;j<=arr[i];j++) {
+            if (arr[i]%j==0) {
+                counter++;
+            }
+        }
+        if (counter==2) {
+            r++;
+        }
+    }
+  return r;
+}
+ 
+bool isPalindrom(int n) {
+    string s=to_string(n);
+    int l=0;
+    int r=s.size()-1;
+    for (int i=0;i<s.size();i++) {
+        if (s[l]!=s[r]) {
+            return false;
+        }
+        r--;
+        l++;
+    }
+    return true;
+}
+int CountPalindrom(int arr[],int size) {
+    int res=0;
+    for (int i=1;i<=size;i++) {
+        if (isPalindrom(arr[i])) {
+            res++;
+        }
+    }
+    return res;
+}
+ 
+int CountDivsisor(int arr[],int size) {
+ 
+    int m=0;
+    int p=0;
+    int counter=0;
+    for (int i=1;i<=size;i++) {
+        counter=0;
+        for (int j=1;j<=arr[i];j++) {
+            if (arr[i]%j==0) {
+                counter++;
+            }
+        }
+ 
+        if (counter > m || (counter == m && arr[i] > p)) {
+            m = counter;
+            p = arr[i];
+        }
+    }
+    return p;
+}
+int main() {
+ 
+    int size;
+    cin>>size;
+    int arr[size+1];
+    for (int i=1;i<=size;i++) {
+        cin>>arr[i];
+    }
+    cout<<"The maximum number : "<<FindMax(arr,size)<<endl;
+    cout<<"The minimum number : "<<FindMin(arr,size)<<endl;
+    cout<<"The number of prime numbers : "<<CountPrime(arr,size)<<endl;
+    cout<<"The number of palindrome numbers : "<<CountPalindrom( arr, size)<<endl;
+    cout<<"The number that has the maximum number of divisors : "<<CountDivsisor(arr, size)<<endl;
+}
