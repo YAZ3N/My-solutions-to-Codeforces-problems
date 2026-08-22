@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void Solve() {
+    long long  id;
+    cin>>id;
+
+    long long col=id/4;
+    long long row;
+
+    if (col%2==0) {
+        row=id%4;
+    }
+   else {
+       row=3-(id%4);
+   }
+    cout<<col<<" "<<row;
+}
+int main() {
+
+    Solve();
+}
