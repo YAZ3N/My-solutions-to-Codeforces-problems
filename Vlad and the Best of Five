@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void Solve() {
+    int t;
+    cin>>t;
+   while (t--) {
+       string s;
+       cin>>s;
+       int freq[2]={0};
+       for (char c : s) {
+           if (c=='A') {
+               freq[0]++;
+           }
+           else if (c=='B') {
+               freq[1]++;
+           }
+       }
+       if (freq[0]>freq[1]) {
+           cout<<"A"<<endl;
+       }
+       else {
+           cout<<"B"<<endl;
+       }
+   }
+}
+
+int main() {
+
+    Solve();
+}
