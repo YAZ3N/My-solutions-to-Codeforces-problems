@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void Solve() {
+
+  int n;
+    cin>>n;
+    while (n--) {
+        string s;
+        cin>>s;
+        string r=s;
+        sort(s.begin(),s.end());
+        if (r==s) {
+            reverse(s.begin(),s.end());
+        }
+        if (r==s) {
+            cout<<"no"<<endl;
+        }
+        else {
+            cout<<"yes"<<endl<<s<<endl;
+        }
+    }
+}
+
+int main() {
+    Solve();
+}
