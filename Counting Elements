@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isFound(int x) {
+
+}
+void Solve() {
+
+    int size;
+    cin>>size;
+    int arr[size];
+    vector<int>vt;
+    for (int i=0;i<size;i++) {
+        cin>>arr[i];
+        vt.push_back(arr[i]);
+    }
+    int counter=0;
+    for (int x : vt) {
+        if (find(vt.begin(),vt.end(),x+1)!=vt.end()) {
+            counter++;
+        }
+    }
+  cout<<counter;
+}
+
+int main() {
+    Solve();
+}
