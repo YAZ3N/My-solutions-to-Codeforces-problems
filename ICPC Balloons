@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void Solve() {
+    int n;
+    cin>>n;
+    int counter=0;
+    int result=0;
+    while (n--) {
+        int x;
+        cin>>x;
+        string s;
+        cin>>s;
+         counter=0;
+        result=0;
+        set<char>st;
+        for (int i=0;i<s.size();i++) {
+            st.insert(s[i]);
+        }
+        counter=st.size()*2;
+        counter+=s.size()-st.size();
+
+        cout<<counter<<endl;
+    }
+
+}
+
+int main() {
+    Solve();
+}
