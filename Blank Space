@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+void Solve() {
+    int n;
+    cin>>n;
+    int counter=0;
+    int maxSize=0;
+    while (n--) {
+        int size;
+        cin>>size;
+        vector<int>v;
+        for (int i=0;i<size;i++) {
+            int x;
+            cin>>x;
+            v.push_back(x);
+        }
+         counter=0;
+         maxSize=0;
+        
+        for (int i=0; i<size; i++ ) {
+                if (v[i]==0) {
+                    counter++;
+                    maxSize=max(maxSize,counter);
+                }
+            else {
+                counter=0;
+            }
+
+        }
+        cout<<maxSize<<endl;
+    }
+}
+int main() {
+    Solve();
+}
