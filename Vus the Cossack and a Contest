@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+void Solve() {
+    int n;
+    cin>>n;
+     int x,y;
+    cin>>x>>y;
+    if (x>=n && y>=n) {
+        cout<<"yes";
+    }
+    else {
+        cout<<"no";
+    }
+}
+int main() {
+    Solve();
+}
