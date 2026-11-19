@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve() {
+   int n;
+    cin>>n;
+
+    while (n--) {
+        int size;
+        cin>>size;
+
+        string s1;
+        cin>>s1;
+
+        string t="";
+
+        for (int i=0;i<size;i++) {
+            s1[i]=tolower(s1[i]);
+
+            if (i==0 || s1[i]!=s1[i-1]) {
+                t+=s1[i];
+            }
+        }
+        if (t=="meow") {
+            cout<<"yes\n";
+        }
+        else {
+            cout<<"no\n";
+        }
+    }
+
+}
+int main()
+{
+    solve();
+
+}
