@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve() {
+
+    int n;
+    cin>>n;
+
+    while (n--) {
+        vector<int>v;
+        int size;
+        cin>>size;
+
+        for (int i=0;i<size;i++) {
+            int x;
+            cin>>x;
+            v.push_back(x);
+        }
+        sort(v.begin(),v.end());
+
+        deque<int>d;
+        for (int o : v) {
+            d.push_back(o);
+        }
+        int r=0;
+        if (d.size()>1 && (d.front()+d.back())%2!=0) {
+            deque<int>temp=d;
+
+            int counter1=0,counter2=0;
+            while (temp.size()>1 && (temp.front()+temp.back())%2!=0) {
+                temp.pop_back();
+                counter1++;
+            }
+            temp=d;
+
+            while (temp.size()>1 && (temp.front()+temp.back())%2!=0) {
+                temp.pop_front();
+                counter2++;
+            }
+             r=min(counter1,counter2);
+        }
+        cout<<r<<endl;
+    }
+
+}
+int main()
+{
+    solve();
+
+}
